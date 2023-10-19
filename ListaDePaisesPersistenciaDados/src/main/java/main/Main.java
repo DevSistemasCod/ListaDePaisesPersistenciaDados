@@ -82,8 +82,8 @@ public class Main {
 					break;
 				}
 			} catch (java.util.InputMismatchException e) {
-				System.out.println("Opcao invalida. Por favor, digite um número inteiro valido.");
-                scanner.nextLine();
+				System.out.println("Opcao invalida. Por favor, digite um numero inteiro valido.");
+                		scanner.nextLine();
 			}
 		}
 		
