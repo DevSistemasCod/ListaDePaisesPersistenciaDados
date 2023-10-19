@@ -54,7 +54,7 @@ public class PaisDAO {
                     .setParameter("nome", nome).getSingleResult();
         } catch (NoResultException e) {
         	LoggerUtil.logError("Erro ao buscar pais: ", e);
-        	throw new EntityNotFoundException("Pais não encontrado com o nome: " + nome);
+        	throw new EntityNotFoundException("Pais nao encontrado com o nome: " + nome);
         }
     }
 
@@ -63,7 +63,7 @@ public class PaisDAO {
             return gerenciarEntidades.createQuery("SELECT p FROM Pais p ORDER BY p.nome", Pais.class)
                     .getResultList();
         }catch (NoResultException e) {
-            throw new EntityNotFoundException("Nenhum país encontrado.");
+            throw new EntityNotFoundException("Nenhum pais encontrado.");
         } catch (Exception e) {
             LoggerUtil.logError("Erro ao listar pais: ", e);
             return new ArrayList<>(); // Retorna uma lista vazia em vez de null
