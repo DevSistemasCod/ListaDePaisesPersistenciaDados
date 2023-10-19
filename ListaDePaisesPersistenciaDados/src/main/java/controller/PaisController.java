@@ -39,4 +39,8 @@ public class PaisController {
 		boolean paisRemovido = paisDAO.removerPais(pais);
 		paisView.removerPais(paisRemovido);
 	}
+
+	public void fecharPaisDAO() {
+        	paisDAO.fechar();
+        }
 }
